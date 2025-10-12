@@ -5,22 +5,18 @@
  * @format
  */
 
-import { StatusBar, Text, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-} from 'react-native-safe-area-context';
-import { getFontFamily } from './assets/fonts/helper';
+import { StatusBar, useColorScheme} from 'react-native';
+import Title from './components/Title/Title';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaProvider>
+    <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={{flex:1, justifyContent:'center', alignItems:'center'}}> 
-        <Text style={{fontSize: 20, fontFamily: getFontFamily('Inter_28pt', '600')}}>Welcome to Social media app</Text> 
-      </View>
-    </SafeAreaProvider>
+      <Title title={'Lets Explore'}/>
+    </SafeAreaView>
   );
 }
 export default App;
