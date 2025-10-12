@@ -9,6 +9,7 @@ import { StatusBar, Text, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
+import { getFontFamily } from './assets/fonts/helper';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -17,7 +18,7 @@ function App() {
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <View style={{flex:1, justifyContent:'center', alignItems:'center'}}> 
-        <Text>Welcome to Social media app</Text> 
+        <Text style={{fontSize: 20, fontFamily: getFontFamily('Inter_28pt', '600')}}>Welcome to Social media app</Text> 
       </View>
     </SafeAreaProvider>
   );
