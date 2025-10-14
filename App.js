@@ -4,12 +4,14 @@ import {
   View,
   Text,
   TouchableOpacity,
+  FlatList
 } from 'react-native';
 import Title from './components/Title/Title';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import globalStyle from './assets/styles.js/globalStyle';
+import globalStyle from './assets/styles/globalStyle';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import UserStory from './components/UserStory/UserStory';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -73,6 +75,19 @@ function App() {
             <Text style={globalStyle.messageNumber}>2</Text>
           </View>
         </TouchableOpacity>
+      </View>
+      <View style={globalStyle.userStoryContainer}>
+        <FlatList
+          showsHorizontalScrollIndicator={false}
+          horizontal={true}
+          data={userStories}
+          renderItem={({item}) => (
+            <UserStory
+              firstName={item.firstName}
+              profileImage={item.profileImage}
+            />
+          )}
+        />
       </View>
     </SafeAreaView>
   );
