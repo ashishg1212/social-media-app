@@ -14,6 +14,54 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
+  const userStories = [
+    {
+      firstName: 'Adam',
+      id: 1,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Alex',
+      id: 2,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Bob',
+      id: 3,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Clara',
+      id: 4,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Diana',
+      id: 5,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Eva',
+      id: 6,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Henry',
+      id: 7,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Sophia',
+      id: 8,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+      firstName: 'Nora',
+      id: 9,
+      profileImage: require('./assets/images/default_profile.png'),
+    },
+  ];
+
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
