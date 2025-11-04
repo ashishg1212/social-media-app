@@ -6,10 +6,12 @@ import {
   Text,
   TouchableOpacity,
   FlatList,
+  Dimensions
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import {scaleFontSize} from './assets/styles/scaling';
 
 import Title from './components/Title/Title';
 import UserStory from './components/UserStory/UserStory';
@@ -196,7 +198,7 @@ function App() {
                 <TouchableOpacity style={globalStyle.messageIcon}>
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    size={20}
+                    size={scaleFontSize(20)}
                     color={'#898DAE'}
                   />
                   <View style={globalStyle.messageNumberContainer}>
